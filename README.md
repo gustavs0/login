@@ -2,7 +2,7 @@
 Sistema de Login em PHP e Javascript
 
 ---
-#Passo a passo em todo início da aula
+# Passo a passo em todo início da aula
 
 Habilitar o Proxy
 Tecla Windows - Abrir a janela Prompt de Comando
@@ -12,7 +12,7 @@ git config --global http.proxy http://10.1.21.254:3128
 
 Pressione Enter
 
-##clonar o repositório **login** na pasta **c:\xampp\htdocs**
+## Clonar o repositório ** login ** na pasta ** c:\xampp\htdocs **
   - Tecla Windows - Abrir o Github Desktop
   - Clique em *Sing in to Github.com*
   - Digite seu Login e Senha do Github
@@ -22,7 +22,7 @@ Pressione Enter
   - Clique no btotão *clone*
   
   
- ##Habilitar o servidor web **Apache** e o servidor **MySQL**
+ ## Habilitar o servidor web **Apache** e o servidor **MySQL**
    - Tecla windows - Abrir o XAMPP Control Panel 
    - Clique em Start para o Apache
    - Clique em Start para o MySQL
