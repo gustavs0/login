@@ -12,7 +12,7 @@ git config --global http.proxy http://10.1.21.254:3128
 
 Pressione Enter
 
-## Clonar o repositório ** login ** na pasta ** c:\xampp\htdocs **
+## Clonar o repositório **login ** na pasta** c:\xampp\htdocs **
   - Tecla Windows - Abrir o Github Desktop
   - Clique em *Sing in to Github.com*
   - Digite seu Login e Senha do Github
