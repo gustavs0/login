@@ -61,6 +61,43 @@
                 </form>
             </div>
         </section>
+<!-- Final da sessão de Login -->
+
+<!-- Formulario de recuperação de senha -->
+<section class="row mt-5">
+    <div class="col-lg-4 offset-lg-4 bg-light rounde" id="caixaLogin">
+        <h2 class="text-center mt-2">
+            Gerar nova senha
+        </h2>
+        <form action="#" method="post" id="formSenha" class="p-2">
+            <div class="form-group">
+                <small class="text-muted">
+                    Para gerar uma nova senha, digite seu e-mail. Clique no link gerado.
+                </small>
+            </div>
+            <div class="form-control">
+                <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha">
+            </div>
+            <div class="form-group">
+                <input type"submit" value="::Gerar::" name="btnGerar" id="btnGerar" class="btn btn-primary btn-block">
+            </div>
+            <div class="form-group">
+                <p calss="text-center">
+                    Já registrado?
+                    <a href="#" id="btnJaRegistrado">
+                        Entrar por aqui.
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Fim dam sessao de recuperação de senha -->
+
+
+
+
+
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
