@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Sistema de Login</title>
     <style>
-    #alerta, #caixaSenha, #caixaRegistro{
-        display: none;
-    }
+        #alerta,
+        #caixaSenha,
+        #caixaRegistro {
+            display: none;
+        }
     </style>
 </head>
 
@@ -122,14 +124,10 @@
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" name="concordar" id="concordar" class="custom-control-input">
-                                <label for="concordar" class="custom-control-label">
-                                    Eu concordo com <a href="#>"os termos e condição desse site top.</a>
-                                </label>
+                            <label for="concordar" class="custom-control-label">
+                                Eu concordo com <a href="#>" os termos e condição desse site top.</a> </label> </div> </div> <div class="form-group">
+                                    <input type="submit" value="::Registrar::" name="btnRegistrar" id="btnRegistrar" clas="btn btn-primary btn-block">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="::Registrar::" name="btnRegistrar" id="btnRegistrar" clas="btn btn-primary btn-block">
-                    </div>
                 </form>
             </div>
         </section>
@@ -143,7 +141,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-    //Código jQuery para mostrar e ocultar os formulários
+        //Código jQuery para mostrar e ocultar os formulários
+        $(function() {
+            $("#btnEsqueci").click(function() {
+                $("#caixaLogin").hide(); //ocultar login
+                $_("#caixaSenha").show(); //mostrar nova senha
+            });
+            $("#btnJaRegistrado").click(function() {
+                $("#caixaLogin").show(); //mostrar
+                $_("#caixaSenha").hide(); //ocultar
+            });
+            $("#btnRegistrarNovo").click(function() {
+                $("#caixaLogin").hide(); //ocultar 
+                $_("#caixaSenha").show(); //mostrar 
+            });
+            $("#btnJaRegistrado2").click(function() {
+                $("#caixaLogin").show(); //mostrar
+                $_("#caixaRegistro").hide(); //ocultar
+            });
+        });
     </script>
 </body>
 
