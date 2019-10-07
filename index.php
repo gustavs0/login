@@ -180,6 +180,31 @@
                 $("#caixaLogin").show(); //mostrar
                 $("#caixaRegistro").hide(); //ocultar
             });
+    //Cadastro de novo usuário
+    $("#btnRegistrar").click(function(e) {
+        if(document.querySeletor("#formRegistro").checkValidity()){
+            e.preventDefalt();//Não abrir outra página
+            //envio dos dados via ajax
+            $.ajax({
+                url: 'recebe_dados.php',
+                method: 'post',
+                data:$("#formRegistro").serialize()'+&action=cadastro',
+                succes:function(resposta){
+                    $("#alerta").show();
+                    $(".resultado").html(resposta);
+                }
+            });
+        }
+        return true;
+    }):
+    //login
+    $("btnEntrar").click(function(e) {
+
+    });
+    //Recuperação de senha
+    $("btnGerar").click(function(e) {
+
+    });
         });
         /*
          * Translated default messages for the jQuery validation plugin.
