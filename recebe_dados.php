@@ -24,6 +24,6 @@ echo "<h1>Alo ha!</h1>
 <h2> Acesso negado</h2>";
 }
 }else{
-    header{"location:index.php"};
+    header("location:index.php");
 
 }
