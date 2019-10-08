@@ -2,6 +2,8 @@
 Sistema de Login em PHP e Javascript
 
 ---
+# aula06 - 08/10/2019
+
 # aula05 - 04/10/2019
  - envio de dadoas para o front-end para back-end, métodos GET e POST.
 
