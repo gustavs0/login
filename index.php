@@ -251,8 +251,9 @@
 
             //Login
             $("#btnEntrar").click(function(e) {
+                if (document
                     .querySelector("#formLogin")
-                        .checkValidity()) {
+                    .checkValidity()) {
                     e.preventDefault(); //Não abrir outra págin
                     //Envio dos dados via Ajax
                     $.ajax({
@@ -267,25 +268,26 @@
                 }
                 return true;
             });
-        //Recuperação de senha
-        $("#btnGerar").click(function(e) {
-                .querySelector("#formSenha")
+            //Recuperação de senha
+            $("#btnGerar").click(function(e) {
+                if (document
+                    .querySelector("#formSenha")
                     .checkValidity()) {
-                e.preventDefault(); //Não abrir outra págin
-                //Envio dos dados via Ajax
-                $.ajax({
-                    url: 'recebe_dados.php',
-                    method: 'post',
-                    data: $("#formSenha").serialize() + '&action=senha',
-                    success: function(resposta) {
-                        $("#alerta").show();
-                        $(".resultado").html(resposta);
-                    }
-                });
-            }
-            return true;
+                    e.preventDefault(); //Não abrir outra págin
+                    //Envio dos dados via Ajax
+                    $.ajax({
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formSenha").serialize() + '&action=senha',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
 
-        });
+            });
         });
 
         /*
