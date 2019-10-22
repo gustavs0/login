@@ -1,3 +1,6 @@
+<?php
+    require_once"session.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,17 +8,14 @@
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <title>Página de Perfil</title>
 </head>
 
 <body>
-    <!-- Barra de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-info bg-dark">
-        <a class="navbar-brand" href="#">Guxtavex</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="#">TNX Systems</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,22 +34,26 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
                         <a class="dropdown-item" href="#">Fotos</a>
-                        <a class="dropdown-item" href="#">Sair</a>
+                        <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
-    <!-- jUMBOTROON -->
-    <div class="jumbotron jumbotron-fluid bg-dark ">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Boas-vindas</h1>
-            <h2 class="display-2 text-center bg-info rounded p-1 text-ligth">Nome completo</h2>
-            <h2 class="text-center">E-mail do Usuário:</h2>
-            <h2 class="text-center">Registrado em: 18/10/2019</h2>
+            <h1 class="display-4">Boas vindas</h1>
+            <h2 class="display-2 text-center rounded p-1" style="background-color: deepPink; color: deepSkyBlue;">
+                Nome completo
+            </h2>
+            <h2 class="text-center">
+                E-mail do Usuário: qualquercoisa@mail.com
+            </h2>
+            <h2 class="text-center">
+                Registrado em: 18/10/2019
+            </h2>
         </div>
     </div>
-
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
