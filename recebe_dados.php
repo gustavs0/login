@@ -1,5 +1,5 @@
 <?php
-//iNICIANDO A SESSÃO
+//Iniciando a sessão
 session_start();
 //Conexão com o banco de dados
 require_once 'configBD.php';
