@@ -16,7 +16,7 @@ require_once "session.php";
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-deepSkyBlue bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <a class="navbar-brand" href="#">TNX Systems</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@ require_once "session.php";
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <?=$nomeDoUsuario?>
+                        <?= $nomeDoUsuario ?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
@@ -44,21 +44,21 @@ require_once "session.php";
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid ">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Boas vindas</h1>
 
-            <h2 class="display-2 text-center rounded p-1" style="background-color: deepSkyBlue; ">
-                <?=$nomeCompleto?>
+            <h2 class="display-2 text-center rounded p-1" style="background-color: deepPink; color: deepSkyBlue;">
+                <?= $nomeCompleto ?>
             </h2>
             <h2 class="text-center">
                 E-mail do Usuário:
-                <a href="malito:<?=$emailUsuario?>">
-                <?=$emailUsuario?>
+                <a href="mailto:<?= $emailUsuario ?>">
+                    <?= $emailUsuario ?>
                 </a>
             </h2>
             <h2 class="text-center">
-                Registrado em: <?=$dataCriado?>
+                Registrado em: <?= $dataCriado  ?>
             </h2>
         </div>
     </div>
