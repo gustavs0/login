@@ -238,6 +238,14 @@
                     <div class="form-group">
                         <input type="submit" value="::Enviar::" name="btnEnviar" class="btn btn-info btn-block">
                     </div>
+                    <div class="form-group">
+                        <p class="text-center">
+                            Já registrado?
+                            <a href="#" id="btnJaRegistrado3">
+                                Entrar por aqui.
+                            </a>
+                        </p>
+                    </div>
                 </form>
 
             </div>
@@ -296,6 +304,10 @@
                 $("#caixaNovo").show(); //Mostrar
             });
             $("#btnEnviar").click(function() {
+                $("#caixaLogin").show(); //Mostrar
+                $("#caixaNovo").hide(); //Ocultar
+            });
+            $("#btnJaRegistrado3").click(function() {
                 $("#caixaLogin").show(); //Mostrar
                 $("#caixaNovo").hide(); //Ocultar
             });
