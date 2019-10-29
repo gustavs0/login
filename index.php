@@ -18,7 +18,8 @@
     <style>
         #alerta,
         #caixaSenha,
-        #caixaRegistro {
+        #caixaRegistro,
+        #caixaNovo {
             display: none;
         }
     </style>
@@ -69,7 +70,6 @@
                             <a href="#" class="float-right" id="btnEsqueci">
                                 Esqueci a senha!
                             </a>
-
                         </div>
                     </div>
 
@@ -187,12 +187,15 @@
 
             </div>
         </section>
+        <!-- Final do formulário de 
+        cadastro de novos usuários -->
 
-        <!-- Início do formulário novo -->
+        <!-- Novo Formulario-->
         <section class="row mt-5">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="novoFormulario">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaNovo">
                 <h2 class="text-center mt-2">Novo</h2>
-                <form action="#" method="post" class="p-2" id="novoRegistro">
+                <form action="#" method="post" class="p-2" id="formNovo">
+
                     <div class="form-group">
                         <label for="nomeCompleto">Nome Completo</label>
                         <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Digite seu nome completo" class="form-control">
@@ -232,23 +235,24 @@
                             <option value="Nova Trento">Nova Trento</option>
                         </select>
                     </div>
-
                     <div class="form-group">
-                        <input type="submit" value="::Enviar::" name="btnEnviar" id="btnRegistrarNovo" class="btn btn-primary btn-block">
+                        <input type="submit" value="::Enviar::" name="btnEnviar" class="btn btn-info btn-block">
                     </div>
-
                 </form>
 
             </div>
         </section>
-        <!-- Final do formulário de 
-        cadastro de novos usuários -->
+
+        </form>
+
+        </div>
+        </section>
 
     </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/query/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
@@ -270,7 +274,6 @@
             });
             $("#formLogin").validate();
             $("#formSenha").validate();
-            $("#novoRegistro").validate();
             //Mostrar e Ocultar Formulários
             $("#btnEsqueci").click(function() {
                 $("#caixaLogin").hide(); //Ocultar Login
@@ -288,14 +291,13 @@
                 $("#caixaLogin").show(); //Mostrar
                 $("#caixaRegistro").hide(); //Ocultar
             });
-
             $("#btnMostrar").click(function() {
-                $("#caixaLogin").show();
-                $("#novoRegistro").hide();
+                $("#caixaLogin").hide(); //Ocultar
+                $("#caixaNovo").show(); //Mostrar
             });
             $("#btnEnviar").click(function() {
                 $("#caixaLogin").show(); //Mostrar
-                $("#novoRegistro").hide(); //Ocultar
+                $("#caixaNovo").hide(); //Ocultar
             });
 
             //Cadastro de novo usuário
@@ -360,29 +362,6 @@
                 }
                 return true;
             });
-        });
-        $("#btnEnviar").click(function(e) {
-            if (document
-                .querySelector("#formLogin")
-                .checkValidity()) {
-                e.preventDefault(); //Não abrir outra págin
-                //Envio dos dados via Ajax
-                $.ajax({
-                    url: 'recebe_dados.php',
-                    method: 'post',
-                    data: $("#formLogin").serialize() + '&action=login',
-                    success: function(resposta) {
-                        $("#alerta").show();
-                        //$(".resultado").html(resposta);
-                        if (resposta === "ok") {
-                            window.location = "perfil.php";
-                        } else {
-                            $(".resultado").html(resposta);
-                        }
-                    }
-                });
-            }
-            return true;
         });
         /*
          * Translated default messages for the jQuery validation plugin.
